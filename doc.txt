@@ -5,6 +5,7 @@ method:
 component:
 	Activitiy {					//defines screen
 		enum menu_type = [
+			none, 							//nonexistent menu
 			horizontal_top,					//horizontal strip with options at the top
 			horizontal_bottom,				//horizontal strip with options at the bottom
 			vertical_left,					//vertical strip with options at the left
@@ -42,4 +43,12 @@ component:
 	
 	Element {					//2-level block
 		
+	}
+	
+	Text : Element {
+	
+	}
+	
+	Image : Element {
+	
 	}

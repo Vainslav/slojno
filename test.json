@@ -1,0 +1,21 @@
+{
+	"type": "Activity",
+	"menu_type": "horizontal_top",
+	"layout_type": "vertical",
+	"children": [
+		{
+			"type": "Service",
+			"priority": "1",
+			"actions": [],
+			"has_header": "true",
+			"header": "sAmPlE_TeXt",
+			"content": []
+		},
+		{
+			"type": "Cards",
+			"priority": "2",
+			"actions": []
+		}
+	]
+	
+}
