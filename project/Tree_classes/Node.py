@@ -1,6 +1,6 @@
 class Node:
     def __init__(self, width=None, height=None, isvisible=True, classes=None):
-        self.actions = []
+        self.actions = {}
         self.isvisible = isvisible
         self.classes = classes
         self.width = width

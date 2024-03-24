@@ -11,7 +11,7 @@ users_dict = {}
 def index():
     if request.remote_addr not in users_dict.keys():
         users_dict[request.remote_addr] = {'1': 0, '2': 0, '3': 0}
-    return send_file('files/index.html')
+    return send_file('file/index.html')
 
 
 @app.route('/content.json')
@@ -22,7 +22,12 @@ def send_json():
 @app.route('/file/<name>')
 def send_f(name):
     print(name)
-    return send_file(f'files/{name}')
+    print("safsadf")
+    return send_file(f'file/{name}')
+
+@app.route('/images/<name>')
+def send_af(name):
+    return send_file(f'file/images/{name}')
 
 
 @app.route('/api/add/<id>', methods=["POST"])
