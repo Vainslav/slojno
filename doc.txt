@@ -39,6 +39,7 @@ component:
 	}
 	
 	Button : Node {
+		text;
 		actions: {on_click:""};
 	}
 	
