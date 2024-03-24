@@ -10,33 +10,46 @@
 
 component:
 
-	Node {								//
+	Node {							//
 		actions{};						//каждый action есть метод определённого store
-		is_visible;
+		isvisible;
 		string[] classes;				//набор опций для различных стилевых решений
+		float? width%;					//опциональная ширина в % от экрана
+		float? height%;					//опциональная высота в % от экрана
 	}
 	
-	Flexbox : Node {					//
+	Flexbox : Node {					
 		flex_flow;
 		justify_content;
 		align_items;
 		align_content;
-		Node[] data;
+		Node[] data;					//все объекты на следующем уровне
 	}
 
 
-	Activitiy : Flexbox {				//
+	Activitiy : Flexbox {				//параметры экрана
 		string name;
 	}
 
-	Text : Node {						//
+	Text : Node {
 		string content;
 	}
 	
-	Image : Node {						//
+	Image : Node {
 		string source;
 	}
-
+	
+	Button : Node {
+		actions: {on_click:""};
+	}
+	
+	Input : Node {
+		actions: {on_change:""};
+	}
+	
+	Checkbox : Node {
+		actions: {on_switch:""};
+	}
 
 store: кастомные хранилища, содержащие в себе изменяющеюся информацию, логику клиента
 
