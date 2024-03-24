@@ -6,6 +6,7 @@ from json import dumps
 
 def generate_json():
     activity = Activity()
+    json_data = dumps(activity.to_json())
 
     F = open("sample_json.json", "w")
     F.write(json_data)
