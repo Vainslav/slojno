@@ -3,7 +3,7 @@ from slojno.project.Tree_classes.Flexbox import Flexbox
 from slojno.project.Tree_classes.Text import Text
 from json import dumps
 
-class Option():
+class Items():
 	def __init__(self, name, image, cost):
 		self.name = name
 		self.image = image
@@ -12,17 +12,20 @@ class Option():
 		label = Text(self.name)
 		cost = Text(self.cost)
 		image = Image(self.image)
-		buy_button = Button()
+		buy_button = Button("купить", onclick = "$add")
 		return Flexbox(label, image, cost, button)
 
 def generate_json():
+	head_text = Text("КАТАЛОГ")
 
-	bkb = Option("BKB", "bkb.png", 4050)
-	prischepka = Option("Прищепка", "prischepka.png", 999)
-	magic_wand = Option("Magic Wand", "magic_wand.png", 450)
+	bkb = Items("BKB", "bkb.png", 4050)
+	prischepka = Items("Прищепка", "prischepka.png", 999)
+	magic_wand = Items("Magic Wand", "magic_wand.png", 450)
+	
+	head = Flexbox([head_text)]
 
-    activity_basket = Activity("basket", )
-    activity_main = Activity("main", [bkb.makedata(), prischepka.makedata()])
+    activity_basket = Activity("basket", [])
+    activity_main = Activity("main", [bkb.makedata(), prischepka.makedata(), head])
     
     json_data = dumps(activity.to_json())
 
