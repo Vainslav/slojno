@@ -30,9 +30,7 @@ def generate_json():
 	activity_main = Activity("main", [bkb.makedata(), prischepka.makedata(), head])
     
 	json_data = dumps(activity_main.to_json())
-	F = open("sample_json.json", "w")
-	F.write(json_data)
-	F.close()
-	return open('sample_json.json')
+	
+    return json_data
 
 generate_json()

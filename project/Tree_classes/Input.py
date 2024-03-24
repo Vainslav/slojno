@@ -2,6 +2,6 @@ from Tree_classes.Node import Node
 
 
 class Input(Node):
-    def __init__(self, action_src, wight=None, height=None, isvisible=True):
-        super().__init__(wight, height, isvisible)
+    def __init__(self, action_src, width=None, height=None, isvisible=True):
+        super().__init__(width, height, isvisible)
         self.actions['on_change'] = action_src
