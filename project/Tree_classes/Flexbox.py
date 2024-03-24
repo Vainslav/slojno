@@ -2,7 +2,7 @@ from slojno.project.Tree_classes.Node import Node
 
 
 class Flexbox(Node):
-    def __init__(self, height, width, data, flex_flow='row nowrap', justify_content='flex-start', align_items='stretch', align_content='normal', isvisible=True):
+    def __init__(self, data, height=None, width=None,  flex_flow='row nowrap', justify_content='flex-start', align_items='stretch', align_content='normal', isvisible=True):
         super().__init__(width, height, isvisible)
         self.data = data
         self.flex_flow = flex_flow
