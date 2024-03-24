@@ -1,9 +1,9 @@
-from slojno.project.Tree_classes.Node import Node
+from Node import Node
 
 
 class Image(Node):
-    def __init__(self, content,  wight=None, height=None, isvisible=True):
-        super().__init__(wight, height, isvisible)
+    def __init__(self, content,  width=None, height=None, isvisible=True):
+        super().__init__(width, height, isvisible)
         self.content = content
 
     def to_json(self):

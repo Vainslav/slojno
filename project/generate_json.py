@@ -1,16 +1,13 @@
-from slojno.project.Tree_classes.Activity import Activity
-from slojno.project.Tree_classes.Flexbox import Flexbox
-from slojno.project.Tree_classes.Text import Text
+from Tree_classes.Activity import Activity
+from Tree_classes.Flexbox import Flexbox
+from Tree_classes.Text import Text
 from json import dumps
 
 
 def generate_json():
-    activity = Activity()
+    activity = Activity("123", [Text("hsakjdhj"), Text("123")])
     json_data = dumps(activity.to_json())
 
-    F = open("sample_json.json", "w")
-    F.write(json_data)
-    F.close()
-    return open('sample_json.json')
+    return json_data
 
 generate_json()
