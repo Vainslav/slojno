@@ -8,11 +8,11 @@ def index():
     return send_file('files/sample_html.html')
 
 
-@app.route('/cotent.json')
+@app.route('/content.json')
 def index():
     return send_file(generate_json())
 
 
 @app.route('/index.css')
 def index():
-    return send_file('1.css')
+    return send_file('files/1.css')
