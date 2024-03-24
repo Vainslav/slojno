@@ -11,9 +11,9 @@
 component:
 
 	Node {								//
-		actions{};
+		actions{};						//каждый action есть метод определённого store
 		is_visible;
-		u-type[] classes;
+		string[] classes;				//набор опций для различных стилевых решений
 	}
 	
 	Flexbox : Node {					//
@@ -37,5 +37,6 @@ component:
 		string source;
 	}
 
+
 store: кастомные хранилища, содержащие в себе изменяющеюся информацию, логику клиента
-	каждый action есть метод определённого store
+
