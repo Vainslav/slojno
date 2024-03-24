@@ -1,0 +1,21 @@
+{"items": [
+    {
+      "id": 1,
+      "name": "BKB",
+      "img_src": "images/bkb.png",
+      "cost": 4050
+    },
+    {
+      "id": 2,
+      "name": "prischepka",
+      "img_src": "images/prischepka.png",
+      "cost": 999
+    },
+    {
+      "id": 3,
+      "name": "Волшебная палочка",
+      "img_src": "images/wand.png",
+      "cost": 450
+    }
+  ]
+}
