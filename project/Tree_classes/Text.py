@@ -1,4 +1,4 @@
-from slojno.project.Tree_classes.Node import Node
+from Tree_classes.Node import Node
 
 
 class Text(Node):

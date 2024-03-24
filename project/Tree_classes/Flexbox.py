@@ -1,4 +1,4 @@
-from slojno.project.Tree_classes.Node import Node
+from Tree_classes.Node import Node
 
 
 class Flexbox(Node):
@@ -12,10 +12,10 @@ class Flexbox(Node):
 
     def to_json(self):
         array = []
-        dict = super().to_json()
+        dicta = super().to_json()
         if self.data:
             for child in self.data:
                 array.append(child.to_json())
         dict1 = {'flex_flow': self.flex_flow, 'justify_content': self.justify_content, 'align_items': self.align_items, 'align_content': self.align_content, 'isvisible': self.isvisible, 'data': array}
-        dict.update(dict1)
-        return dict
+        dicta.update(dict1)
+        return dicta
