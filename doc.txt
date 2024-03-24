@@ -9,52 +9,33 @@
 Если опция имеет вид "mobile-<option>" или "web-<option>", то значение справа будет использовано только на соответствующей платформе
 
 component:
-	Activitiy {					//defines screen
-		enum menu_type = [
-			none, 							//nonexistent menu
-			horizontal_top,					//horizontal strip with options at the top
-			horizontal_bottom,				//horizontal strip with options at the bottom
-			vertical_left,					//vertical strip with options at the left
-			vertical_right,					//vertical strip with options at the right
-			drop_menu						//dropping list of options somewhere :)
-		];						
-		enum layout_type = [
-			vertical,						//screen-wide objects from the top to bottom
-			unified,						//unified distribution ("tiles"-like)
-			centered						//priority=1 objects in the center, surrounded by less priority objects
-		];
-		Div[] children;				//list of objects
+
+	Node {								//
+		actions{};
+		is_visible;
+		u-type[] classes;
 	}
 	
-	Div {						//1-level block
-		int priority;				//1-large, 2-mid, 3-small, 0-none
-		actions[];
-		
+	Flexbox : Node {					//
+		flex_flow;
+		justify_content;
+		align_items;
+		align_content;
+		Node[] data;
+	}
+
+
+	Activitiy : Flexbox {				//
+		string name;
+	}
+
+	Text : Node {						//
+		string content;
 	}
 	
-	Service : Div {
-		bool has_header;
-		string header;
-		content[
-			.,
-			.,
-			children,
-			...];
-	
+	Image : Node {						//
+		string source;
 	}
-	
-	Cards : Div {
-	
-	}
-	
-	Element {					//2-level block
-		
-	}
-	
-	Text : Element {
-	
-	}
-	
-	Image : Element {
-	
-	}
+
+store: кастомные хранилища, содержащие в себе изменяющеюся информацию, логику клиента
+	каждый action есть метод определённого store
