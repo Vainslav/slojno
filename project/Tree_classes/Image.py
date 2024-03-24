@@ -1,4 +1,4 @@
-from Node import Node
+from Tree_classes.Node import Node
 
 
 class Image(Node):
