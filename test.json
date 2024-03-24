@@ -5,7 +5,7 @@
 	"children": [
 		{
 			"type": "Service",
-			"priority": "1",
+			"priority": 1,
 			"actions": [],
 			"has_header": "true",
 			"header": "sAmPlE_TeXt",
@@ -13,7 +13,7 @@
 		},
 		{
 			"type": "Cards",
-			"priority": "2",
+			"priority": 2,
 			"actions": []
 		}
 	]
